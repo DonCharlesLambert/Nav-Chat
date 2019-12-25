@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, KeyboardAvoidingView, TextInput, Button, Alert } from 'react-native';
+import { GiftedChat } from 'react-native-gifted-chat';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -74,7 +75,6 @@ class Main extends React.Component {
 function Chat(){
   return (
       <View style={styles.previewContainer}>
-
       </View>
   );
 }
