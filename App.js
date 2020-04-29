@@ -4,7 +4,6 @@ import { StyleSheet, Text, View, Image, ImageBackground,
 import Constants from 'expo-constants';
 import { getLyrics } from 'genius-lyrics-api';
 
-
 export default class App extends React.Component{
   style = StyleSheet.create({
       container: {
@@ -20,6 +19,7 @@ export default class App extends React.Component{
   }
 
   transferMessage = (msg) => {
+    console.log("sending " + msg)
     this.setState({userMsg: msg})
   }
 
@@ -45,14 +45,19 @@ class MyBox extends React.Component{
         }
     })
 
+    state = {
+        text: "What are the lyrics to Boy Back?"
+    }
+
     render(){
         return(
             <View>
                 <Image resizeMode="contain" source={require('./textbox.png')}/>
                 <ScrollView style={this.style.text}>
                     <TextInput
-                        value={"What is the chorus to Boy Back?"}
-                        onChangeText={(text) => this.props.send(text)}
+                        value = {this.state.text}
+                        onChangeText={text => this.setState({text: text})}
+                        onEndEditing={e => this.props.send(this.state.text)}
                     />
                 </ScrollView>
             </View>
@@ -71,26 +76,40 @@ class Navbox extends React.Component{
         }
     })
 
+    boyBack = "Got rackity-rack-rack-racks in my knapity-sack-sack-sack (yeah, racks)\n" +
+        "Ever since Tap-Tap-Tap, I feel like the brown boy back-back-back (I'm back)\n" +
+        "Prada shoes with the strap, in every color, I'm proud of that (proud of that)\n" +
+        "All they see is success but they don't know where I started at\n" +
+        "I can't take no days off, I got money I gotta get (no)\n" +
+        "Hit the gas and I take off, pipes be cracklin' when I shift (skrrt)\n" +
+        "It's clear as you can see, got a big bankroll on me (racks)\n" +
+        "Got a coupe, got power seats, three months before release"
+
     state = {
-        reply: "Got rackity-rack-rack-racks in my knapity-sack-sack-sack (yeah, racks)\n" +
-            "Ever since Tap-Tap-Tap, I feel like the brown boy back-back-back (I'm back)\n" +
-            "Prada shoes with the strap, in every color, I'm proud of that (proud of that)\n" +
-            "All they see is success but they don't know where I started at\n" +
-            "I can't take no days off, I got money I gotta get (no)\n" +
-            "Hit the gas and I take off, pipes be cracklin' when I shift (skrrt)\n" +
-            "It's clear as you can see, got a big bankroll on me (racks)\n" +
-            "Got a coupe, got power seats, three months before release"
+        reply: this.boyBack
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
         if(this.props != nextProps) {
-            this.sendMessage()
+            this.sendMessage(nextProps)
         }
         return true
     }
 
-    sendMessage = () => {
-        this.setState({reply: this.props.msg})
+    sendMessage = (props) => {
+        myAccessToken = ""
+        console.log("recieved " + props.msg)
+        const options = {
+            apiKey: myAccessToken,
+            title: props.msg,
+            artist: 'Nav',
+            optimizeQuery: true
+        };
+        getLyrics(options).then(lyrics => {
+                console.log("found lyrics for " + props.msg)
+                this.setState({reply: lyrics})
+            }
+        );
     }
 
     render(){
