@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground,
         KeyboardAvoidingView, TextInput, Button, ScrollView } from 'react-native';
 import Constants from 'expo-constants';
+import { getLyrics } from 'genius-lyrics-api';
 
 
 export default class App extends React.Component{
