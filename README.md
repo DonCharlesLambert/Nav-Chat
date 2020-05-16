@@ -1,11 +1,30 @@
-# Sample Snack app
+# Nav Chat
+Communicate with the world famous Navraj and ask him all about your favourite songs! Uses the Genius API to collect song descriptions that Mr. Pixel Goraya can regurgitate back to you!
+## Get It Running
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by clicking the **Run** button or use the simulator by clicking **Tap to Play**. When you're done, click **Save** and share the link!
+| npm    | expo   |
+|--      |--      |
+| 6.10.2 | 3.11.3 |
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Export** your project and use it with [expo-cli](https://docs.expo.io/versions/latest/introduction/installation.html).
+1. Open Terminal  
+`C:\>`
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the **Embed** button.
+2. Cd into the project directory  
+`C:\Nav-Chat\>`
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.io).
+3. Run npm install to install node modules  
+`C:\Nav-Chat\> npm install`
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack-web).
+4. Run expo start  
+`C:\Nav-Chat\> expo start`
+
+5. Scan the QR code on your phone as it appears
+
+## Screenshots
+
+![enter image description here](https://github.com/DonCharlesLambert/Nav-Chat/blob/master/assets/ss0.PNG?raw=true)
+
+![enter image description here](https://github.com/DonCharlesLambert/Nav-Chat/blob/master/assets/ss1.PNG?raw=true)
+
+## Info
+Finished 16th May...
