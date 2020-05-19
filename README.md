@@ -19,6 +19,7 @@ Communicate with the world famous Navraj and ask him all about your favourite so
 `C:\Nav-Chat\> expo start`
 
 5. Scan the QR code on your phone as it appears
+6. In using that app don't actually write full sentence, just write song names, I am not NLP man
 
 ## Screenshots
 
