@@ -29,6 +29,3 @@ Communicate with the world famous Navraj and ask him all about your favourite so
 
 <img src="https://github.com/DonCharlesLambert/Nav-Chat/blob/master/assets/ss1.PNG?raw=true" align="right" width="45%" alt="The app at work after entering Boy Back"/>
 </div>
-
-## Info
-Finished 16th May...
