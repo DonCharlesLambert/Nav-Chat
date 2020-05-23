@@ -1,3 +1,5 @@
+
+
 # Nav Chat
 Communicate with the world famous Navraj and ask him all about your favourite songs! Uses the Genius API to collect song descriptions that Mr. Pixel Goraya can regurgitate back to you!
 ## Get It Running
@@ -22,10 +24,11 @@ Communicate with the world famous Navraj and ask him all about your favourite so
 6. In using that app don't actually write full sentence, just write song names, I am not NLP man
 
 ## Screenshots
+<div>
+<img src="https://github.com/DonCharlesLambert/Nav-Chat/blob/master/assets/ss0.PNG?raw=true" align="left" width="45%" alt="The app at work after entering Life is Good"/>
 
-![enter image description here](https://github.com/DonCharlesLambert/Nav-Chat/blob/master/assets/ss0.PNG?raw=true)
-
-![enter image description here](https://github.com/DonCharlesLambert/Nav-Chat/blob/master/assets/ss1.PNG?raw=true)
+<img src="https://github.com/DonCharlesLambert/Nav-Chat/blob/master/assets/ss1.PNG?raw=true" align="right" width="45%" alt="The app at work after entering Boy Back"/>
+</div>
 
 ## Info
 Finished 16th May...
